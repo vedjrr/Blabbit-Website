@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Blabbit: your voice, typed. Free dictation for Mac</title>
+  <meta name="description" content="Hold a key, speak, let go, and your words appear wherever your cursor is. Blabbit runs entirely on your Mac, with no cloud, account or subscription. Free and open source.">
+  <meta name="theme-color" content="#f3f1ec">
+  <meta property="og:title" content="Blabbit: your voice, typed.">
+  <meta property="og:description" content="Hold a key, speak, let go. Free, open-source dictation for macOS that runs entirely on your Mac.">
+  <meta property="og:image" content="assets/img/icon-256.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-256.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/matter.min.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="#top">
+        <span>Blabbit</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#demo">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="nav__gh" href="https://github.com/vedjrr/Blabbit" rel="noopener" aria-label="Blabbit on GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a class="btn btn--ink btn--sm" href="https://github.com/vedjrr/Blabbit/releases/latest/download/Utter.dmg" data-download>Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero: the headline is a pile of spoken words you can pick up and throw -->
+    <section class="blab" id="top" data-blab>
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <div class="blab__copy" data-blab-copy>
+        <h1 class="blab__title">
+          <span class="mark" data-mark>Blabbit</span>
+          <span class="blab__tag">Talk instead of typing. <em>Free dictation for your&nbsp;Mac.</em></span>
+        </h1>
+        <p class="blab__lede">Hold <kbd>⌥</kbd>&thinsp;<kbd>Space</kbd>, talk, let go. Your words land wherever your cursor is, in any app. No account, no subscription, and nothing leaves your&nbsp;Mac.</p>
+        <div class="hero__cta">
+          <a class="btn btn--ink btn--lg" href="https://github.com/vedjrr/Blabbit/releases/latest/download/Utter.dmg" data-download>
+            <svg class="apple" viewBox="0 0 17 20" aria-hidden="true"><path d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9C3.7 4.8 2.1 5.8 1.2 7.3c-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.2zM11.6 3.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
+            Download for Mac
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/vedjrr/Blabbit" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="hero__meta">Free forever · MIT licence · macOS 14+ on Apple&nbsp;Silicon</p>
+        <p class="blab__hint" aria-hidden="true" data-hint><span class="blab__hint-fine">Psst: grab a word and throw it. Click empty space to blab more.</span><span class="blab__hint-touch">Drag a word. Tap to blab more.</span></p>
+
+      </div>
+
+      <div class="pit" data-pit aria-hidden="true">
+        <span class="blk blk--lilac blk--lg">um</span>
+        <span class="blk blk--ink">scratch that</span>
+        <span class="blk blk--mint">Friday at 5&nbsp;p.m.</span>
+        <span class="blk blk--peach blk--lg">sorry,</span>
+        <span class="blk blk--key">⌥</span>
+        <span class="blk blk--key blk--space">Space</span>
+        <span class="blk">hey team</span>
+        <span class="blk blk--violet">no account</span>
+        <span class="blk blk--sm">so basically</span>
+        <span class="blk blk--teal blk--lg">free</span>
+        <span class="blk blk--lilac">on my Mac</span>
+        <span class="blk blk--ink blk--sm">MIT</span>
+        <span class="blk blk--peach">like,</span>
+        <span class="blk">75&nbsp;ms</span>
+        <span class="blk blk--mint blk--sm">okay so</span>
+        <span class="blk blk--violet blk--lg">thanks!</span>
+        <span class="blk blk--sm">hmm</span>
+        <span class="blk blk--teal">ship it</span>
+        <span class="blk blk--lilac blk--sm">actually</span>
+        <span class="blk">book the big room</span>
+        <span class="blk blk--ink">open source</span>
+        <span class="blk blk--peach blk--sm">Parakeet</span>
+        <span class="blk blk--mint">no subscription</span>
+        <span class="blk blk--sm">Whisper</span>
+        <span class="blk blk--lilac blk--lg">wait,</span>
+        <span class="blk blk--ink blk--sm">lol</span>
+        <span class="blk blk--mint">in any app</span>
+        <span class="blk blk--sm">quick thought</span>
+        <span class="blk blk--peach blk--lg">honestly</span>
+        <span class="blk blk--violet">no cloud</span>
+        <span class="blk blk--lilac blk--sm">per my last email</span>
+        <span class="blk blk--ink blk--sm">Apple Silicon</span>
+        <span class="blk blk--teal">notes to self</span>
+        <span class="blk blk--sm">Slack</span>
+      </div>
+    </section>
+
+    <!-- Scroll-driven dictation demo (one pinned scene) -->
+    <section class="hero" data-hero aria-label="How it works">
+      <div class="hero__pin" data-pin>
+        <h2 class="demo__title">Hold <em>⌥ Space.</em> Talk. Let go.</h2>
+
+        <!-- Scene captions replace the headline while the demo plays -->
+        <div class="captions" aria-hidden="true">
+          <p class="caption" data-cap="0">Hold <em>⌥ Space.</em></p>
+          <p class="caption" data-cap="1">Just talk. <em>Change your mind out loud.</em></p>
+          <p class="caption" data-cap="2">Let go. <em>It’s already there.</em></p>
+        </div>
+
+        <div class="stage" id="demo" data-stage>
+          <figure class="win" data-win aria-label="Example: Blabbit types a spoken email into Mail, fixing a spoken correction">
+            <div class="win__bar">
+              <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win__title">New Message</span>
+            </div>
+            <div class="win__fields" aria-hidden="true">
+              <p><span>To:</span> Design Team</p>
+              <p><span>Subject:</span> Launch review</p>
+            </div>
+            <p class="win__body" data-doc>Hey team, let’s move the launch review to Friday at 5&nbsp;p.m. I’ll bring the new designs. Can someone book the big room? Thanks!</p>
+            <figcaption class="sr-only">While Option-Space is held, the spoken words “Friday at 6, sorry, 5 p.m.” become “Friday at 5 p.m.” in the email.</figcaption>
+          </figure>
+          <div class="ghosts" data-ghosts aria-hidden="true"></div>
+          <div class="dock" aria-hidden="true">
+            <div class="keys" data-keys><span class="key">⌥</span><span class="key key--space">Space</span></div>
+            <div class="pill" data-pill>
+              <canvas class="orb" width="34" height="34" data-orb="pill"></canvas>
+              <span class="wave" data-wave><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="pill__time" data-time>0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifesto: words fill in as you scroll -->
+    <section class="manifesto" aria-label="Why Blabbit">
+      <div class="wrap">
+        <p class="manifesto__text" data-reveal>Blabbit is free. Not <em>free&#8209;trial</em> free. Not <em>free&#8209;tier</em> free. Open source, MIT&#8209;licensed, <em>yours&#8209;forever</em> free. No account. No subscription. And not one second of your voice ever leaves your&nbsp;Mac.</p>
+      </div>
+    </section>
+
+    <!-- New to dictation: plain use cases for people who have never tried it -->
+    <section class="newbie wrap" aria-labelledby="newbie-title">
+      <div class="newbie__head">
+        <h2 id="newbie-title" class="display display--sm">Never dictated before? <em>You already know how.</em></h2>
+        <p class="newbie__lede">If you can say it, Blabbit can type it. There is nothing to learn and no training it to your voice. Talk the way you’d talk to a friend, then let go of the key.</p>
+      </div>
+      <ul class="uses">
+        <li class="use">
+          <p class="use__said">“On my way, be there in ten.”</p>
+          <h3>Reply to messages</h3>
+          <p>Answer Messages, Slack or WhatsApp without stopping what you’re doing.</p>
+        </li>
+        <li class="use">
+          <p class="use__said">“Hi Sam, thanks for sending this over…”</p>
+          <h3>Write emails faster</h3>
+          <p>Talking is quicker than typing for most of us. Say the draft, then tidy it up.</p>
+        </li>
+        <li class="use">
+          <p class="use__said">“Idea: a reminder that knows when I’m home.”</p>
+          <h3>Catch a thought</h3>
+          <p>Say it into Notes before it’s gone, while it still sounds like you.</p>
+        </li>
+        <li class="use">
+          <p class="use__said">“Okay, give my wrists a break.”</p>
+          <h3>Rest your hands</h3>
+          <p>Helpful if typing hurts or tires you, or if spelling slows you down.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Speed -->
+    <section class="speed" aria-labelledby="speed-title">
+      <div class="speed__card">
+        <div class="speed__head">
+          <p class="eyebrow eyebrow--dark">Speed</p>
+          <h2 id="speed-title" class="display display--md">Faster than you can <em>blink.</em></h2>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <p class="stat__num"><span data-count="75">75</span><small>ms</small></p>
+            <p class="stat__label">to turn 5 seconds of speech into text, on your Mac’s&nbsp;GPU.</p>
+          </div>
+          <div class="stat">
+            <p class="stat__num"><span data-count="0.3" data-decimals="1">0.3</span><small>s</small></p>
+            <p class="stat__label">until a 5-minute dictation is ready after you let go. It transcribes at every&nbsp;pause.</p>
+          </div>
+          <div class="stat">
+            <p class="stat__num"><span data-count="0">0</span><small>bytes</small></p>
+            <p class="stat__label">of audio uploaded. There is no Blabbit server to send it&nbsp;to.</p>
+          </div>
+        </div>
+        <div class="race" aria-label="5 seconds of speech compared with 75 milliseconds of processing, to scale">
+          <div class="race__row"><span>You speak</span><b class="race__track"><i class="race__bar race__bar--you" data-race="you"></i></b><span>5&nbsp;s</span></div>
+          <div class="race__row"><span>Blabbit writes</span><b class="race__track"><i class="race__bar race__bar--utter" data-race="utter"></i></b><span>75&nbsp;ms</span></div>
+        </div>
+        <p class="speed__foot">Measured with Parakeet V2 on Apple Silicon. Bars to scale.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features wrap" id="features" aria-labelledby="features-title">
+      <h2 id="features-title" class="display display--md center">Built for the way <em>you actually talk.</em></h2>
+
+      <div class="bento">
+        <article class="card card--fix">
+          <div class="card__vis fix" aria-hidden="true">
+            <p class="fix__said">“Book it for <b>6</b>, sorry, <b>5&nbsp;p.m.</b>”</p>
+            <p class="fix__typed">Book it for <span class="fix__old" data-fix-old>6</span><span class="fix__new" data-fix-new>5&nbsp;p.m.</span><i class="caret"></i></p>
+          </div>
+          <h3>Correct yourself out loud</h3>
+          <p>Say “sorry”, “I mean” or “actually” and Blabbit keeps only what you meant. “Scratch that” drops the whole sentence. In&nbsp;English.</p>
+        </article>
+
+        <article class="card card--vocab">
+          <div class="card__vis vocab" aria-hidden="true">
+            <div class="vocab__flip" data-vocab>
+              <p><s>post grass QL</s><b>PostgreSQL</b></p>
+              <p><s>swift you eye</s><b>SwiftUI</b></p>
+              <p><s>hold my code</s><b>HoldMyCode</b></p>
+            </div>
+          </div>
+          <h3>Your jargon, spelled right</h3>
+          <p>Add names, products and tech terms to your vocabulary. Blabbit fixes the ways speech models mishear&nbsp;them.</p>
+        </article>
+
+        <article class="card card--apps">
+          <div class="card__vis apps" aria-hidden="true">
+            <ul class="apps__list" data-apps>
+              <li>Email</li><li>Chat</li><li>Code editor</li><li>Docs</li><li>Browser</li><li class="apps__no">Password <small>skipped</small></li>
+            </ul>
+          </div>
+          <h3>Works in every app</h3>
+          <p>Types through Accessibility, or pastes and puts your clipboard back. Pick per app. It never types into a password&nbsp;field.</p>
+        </article>
+
+        <article class="card card--models">
+          <div class="card__vis models" aria-hidden="true">
+            <div class="marquee"><div class="marquee__track">
+              <span class="chip chip--rec">Parakeet V2</span><span class="chip">Whisper Large v3 Turbo</span><span class="chip">Parakeet V3</span><span class="chip">SenseVoice</span><span class="chip">Moonshine</span><span class="chip">Canary Flash</span><span class="chip">Qwen3-ASR</span><span class="chip">Granite Speech</span><span class="chip">Your own GGUF</span>
+              <span class="chip chip--rec">Parakeet V2</span><span class="chip">Whisper Large v3 Turbo</span><span class="chip">Parakeet V3</span><span class="chip">SenseVoice</span><span class="chip">Moonshine</span><span class="chip">Canary Flash</span><span class="chip">Qwen3-ASR</span><span class="chip">Granite Speech</span><span class="chip">Your own GGUF</span>
+            </div></div>
+          </div>
+          <h3>15 model families</h3>
+          <p>Each with measured accuracy and speed. Start with Parakeet V2 (English, 730&nbsp;MB), or pick Whisper or Parakeet V3 for other&nbsp;languages.</p>
+        </article>
+      </div>
+
+      <ul class="also">
+        <li><b>Modes.</b> Exact, Clean, Code, Professional, Custom.</li>
+        <li><b>History.</b> Searchable, on your Mac, text only.</li>
+        <li><b>Native.</b> SwiftUI app, Rust engine on Metal.</li>
+        <li><b>Private.</b> Online only for model downloads and signed updates.</li>
+      </ul>
+    </section>
+
+    <!-- Install -->
+    <section class="install wrap" id="install" aria-labelledby="install-title">
+      <h2 id="install-title" class="display display--md center">Two minutes to your <em>first sentence.</em></h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__n">1</span>
+          <h3>Download</h3>
+          <p>Open <code>Utter.dmg</code> and drag the app to Applications. It’s still called Utter inside while the rename finishes.</p>
+        </li>
+        <li class="step">
+          <span class="step__n">2</span>
+          <h3>Allow it once</h3>
+          <p>Blabbit isn’t notarised (that needs a paid Apple account). In <b>System Settings → Privacy &amp; Security</b>, click <b>Open Anyway</b>. Updates never ask&nbsp;again.</p>
+        </li>
+        <li class="step">
+          <span class="step__n">3</span>
+          <h3>Two permissions</h3>
+          <p><b>Microphone</b> to hear you, <b>Accessibility</b> to type at your cursor.</p>
+        </li>
+        <li class="step">
+          <span class="step__n">4</span>
+          <h3>Talk</h3>
+          <p>Download the recommended voice model, <b>Parakeet V2</b>, when the app offers it. Then click into any text field and hold <kbd>⌥</kbd>&thinsp;<kbd>Space</kbd>.</p>
+        </li>
+      </ol>
+
+      <!-- What step 2 looks like, drawn in HTML so the text stays real -->
+      <figure class="gate">
+        <div class="gate__shot" aria-hidden="true">
+          <div class="gate__bar"><span class="lights"><i></i><i></i><i></i></span><span>Privacy &amp; Security</span></div>
+          <div class="gate__body">
+            <p class="gate__section">Security</p>
+            <div class="gate__row">
+              <p>“Utter” was blocked to protect your Mac.</p>
+              <span class="gate__btn">Open Anyway</span>
+            </div>
+          </div>
+        </div>
+        <figcaption class="gate__cap">
+          <h3>Step 2, up close</h3>
+          <p>Open the app once and click <b>Done</b> when macOS says it can’t verify it. Then go to <b>System Settings → Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b>. You only do this once.</p>
+        </figcaption>
+      </figure>
+      <div class="terminal">
+        <span class="terminal__label">Prefer Terminal for step 2?</span>
+        <div class="code">
+          <code id="xattr">xattr -dr com.apple.quarantine /Applications/Utter.app</code>
+          <button class="copy" type="button" data-copy="xattr">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq wrap" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="display display--sm">Questions</h2>
+      <div class="faq__list">
+        <details>
+          <summary>Is it really free?</summary>
+          <p>Yes. Blabbit is open source under the MIT licence, with no paid tier, account or subscription. Model licences are shown in the Model Manager; most are MIT or Apache-2.0.</p>
+        </details>
+        <details>
+          <summary>Is it listening all the time?</summary>
+          <p>No. Blabbit uses the microphone only while you hold the shortcut, and a small overlay shows when it’s listening. The audio is transcribed on your Mac and never uploaded.</p>
+        </details>
+        <details>
+          <summary>Do I need to be good with computers?</summary>
+          <p>No. Install takes about two minutes and the app walks you through it. After that there is one thing to remember: hold ⌥ Space, talk, let go. If you get stuck, <a href="https://github.com/vedjrr/Blabbit/issues/new" rel="noopener">ask on GitHub</a> and you’ll get an answer from a person.</p>
+        </details>
+        <details>
+          <summary>Does it work offline?</summary>
+          <p>Yes. Once a model is downloaded, dictation needs no connection. Blabbit goes online only to download a model you choose (checked with SHA-256), to check for updates (verified with an EdDSA signature), and for Anthropic rewriting if you opt in and turn off Local-only mode, which is on by default.</p>
+        </details>
+        <details>
+          <summary>Which Macs does it run on?</summary>
+          <p>Apple Silicon Macs (M1 or later) on macOS 14 Sonoma or later. Intel Macs aren’t supported.</p>
+        </details>
+        <details>
+          <summary>Which languages can I dictate in?</summary>
+          <p>Parakeet V2 is English only. For other languages, choose Parakeet V3 or a Whisper model in Settings → Models. The app itself is in English.</p>
+        </details>
+        <details>
+          <summary>Why does macOS say it can’t verify Blabbit?</summary>
+          <p>Notarisation needs a paid Apple developer account, which this free project doesn’t have. The app is signed and its source is public. Approve it once with Open Anyway; updates don’t ask again.</p>
+        </details>
+        <details>
+          <summary>How do I uninstall it?</summary>
+          <p>Quit Blabbit, delete it from Applications, and remove <code>~/Library/Application Support/Utter</code>. The <a href="https://github.com/vedjrr/Blabbit#uninstall" rel="noopener">README</a> lists every file Blabbit keeps.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Maker note: a person, not a company -->
+    <section class="maker wrap" aria-labelledby="maker-title">
+      <div class="maker__card">
+        <span class="maker__avatar" aria-hidden="true">V</span>
+        <div>
+          <h2 id="maker-title" class="maker__title">Made by Ved, in the open.</h2>
+          <p>Blabbit is a free app built by one developer, with every line of code on GitHub for anyone to read. Found a bug, want a feature, or just want to say it helped? Open an issue. A human reads every one.</p>
+          <div class="maker__links">
+            <a class="btn btn--ghost btn--sm" href="https://github.com/vedjrr/Blabbit/issues/new" rel="noopener">Say hi or ask a question</a>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/vedjrr/Blabbit" rel="noopener">Star on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="close" aria-labelledby="close-title">
+      <div class="aurora aurora--close" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="close__inner">
+        <h2 id="close-title" class="display">Stop typing <em>everything.</em></h2>
+        <p class="close__lede">Free, open source, and yours to keep.</p>
+        <a class="btn btn--ink btn--lg" href="https://github.com/vedjrr/Blabbit/releases/latest/download/Utter.dmg" data-download>
+          <svg class="apple" viewBox="0 0 17 20" aria-hidden="true"><path d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9C3.7 4.8 2.1 5.8 1.2 7.3c-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.2zM11.6 3.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
+          Download for Mac
+        </a>
+        <p class="close__meta">macOS 14+ · Apple Silicon · Free forever</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span>Blabbit</span>
+      </div>
+      <nav class="footer__links" aria-label="Project links">
+        <a href="https://github.com/vedjrr/Blabbit" rel="noopener">Source code</a>
+        <a href="https://github.com/vedjrr/Blabbit/releases" rel="noopener">Releases</a>
+        <a href="https://github.com/vedjrr/Blabbit/issues" rel="noopener">Get help</a>
+      </nav>
+      <p class="footer__note">© 2026 Ved · MIT Licence · No cookies, analytics or trackers.</p>
+    </div>
+  </footer>
+
+  <!-- Shown after a Download click: what happens next, or a note for visitors not on a Mac -->
+  <dialog class="next" data-next aria-labelledby="next-title">
+    <button class="next__x" type="button" data-next-close aria-label="Close">×</button>
+    <div data-next-mac>
+      <p class="next__eyebrow">Download started</p>
+      <h2 id="next-title" class="next__title">Nice. Here’s what happens <em>next.</em></h2>
+      <ol class="next__steps">
+        <li><b>Open <code>Utter.dmg</code></b> from your Downloads and drag the app to Applications.</li>
+        <li><b>Open it once, click Done,</b> then click <b>Open Anyway</b> in System Settings → Privacy &amp; Security.</li>
+        <li><b>Allow Microphone and Accessibility</b> so it can hear you and type for you.</li>
+        <li><b>Hold <kbd>⌥</kbd>&thinsp;<kbd>Space</kbd></b> in any text field and talk.</li>
+      </ol>
+      <p class="next__foot">Download didn’t start? <a href="https://github.com/vedjrr/Blabbit/releases/latest" rel="noopener">Get it from GitHub</a>. Stuck? <a href="https://github.com/vedjrr/Blabbit/issues/new" rel="noopener">Ask here</a>.</p>
+    </div>
+    <div data-next-other hidden>
+      <p class="next__eyebrow">Heads up</p>
+      <h2 class="next__title">Blabbit is a <em>Mac app.</em></h2>
+      <p class="next__text">It runs on Apple Silicon Macs (M1 or later) with macOS 14 or newer. Open this page on your Mac to install it, or star it on GitHub so you can find it later.</p>
+      <div class="next__actions">
+        <a class="btn btn--ink" href="https://github.com/vedjrr/Blabbit" rel="noopener">Star on GitHub</a>
+        <a class="btn btn--ghost" href="https://github.com/vedjrr/Blabbit/releases/latest/download/Utter.dmg" data-next-anyway>Download anyway</a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

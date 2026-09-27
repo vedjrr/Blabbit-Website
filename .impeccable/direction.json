@@ -1,0 +1,128 @@
+{
+  "title": "Choose the visual world for Blabbit's site",
+  "question": "The roll assigned the Freeware Desktop world. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Freeware Desktop",
+      "kicker": "THE ROLL",
+      "lineage": "Classic Mac OS system software and the 90s freeware scene",
+      "thesis": "The site is a Mac desktop you dictate into, the way free Mac software was always handed around.",
+      "palette": ["#dcdcdc", "#ffffff", "#111111", "#3a6df0", "#ff5a1f"],
+      "materials": ["platinum window chrome", "1px bevels", "pixel-crisp icons", "menu bar"],
+      "viewport": "A full-screen desktop with a real menu bar. You hold a big ⌥ Space keycap and words type into a TextEdit-like window, beside a Read Me window saying 'Free. Open source. On your Mac.' and the Download icon.",
+      "risk": "Reads as retro cosplay if the modern speed story (75 ms, Apple Silicon) isn't just as loud.",
+      "raised": [
+        {"from": "challenger-raku", "raise": "One hot color only: safety orange marks 'live' (holding the key, recording) and nothing else."},
+        {"from": "challenger-vu", "raise": "Motion has mass: windows, the cursor and the level meter move with GSAP spring ballistics, never instant or linear."},
+        {"from": "challenger-teletext", "raise": "A strict whole-unit grid: windows and icons snap to an 8px desktop grid on every breakpoint."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Shorthand Pad",
+      "kicker": "MY PICK",
+      "lineage": "Gregg shorthand notebooks and court stenography",
+      "thesis": "Stenographers wrote speech as fast as it was spoken. Blabbit does it for free.",
+      "palette": ["#f4f0e0", "#1b2d5a", "#d23c2a", "#9fb7c9"],
+      "materials": ["ruled steno pad", "center margin line", "pen strokes that morph into type"],
+      "viewport": "A giant steno pad page where shorthand strokes draw themselves and resolve into typed words as you scroll.",
+      "risk": "Close to the paper-and-serif editorial look many AI sites land on, and the Mac isn't in it."
+    },
+    {
+      "id": "challenger-hardware",
+      "label": "Creator Hardware Bench",
+      "verdict": "competitive",
+      "lineage": "Teenage Engineering-style desk instruments",
+      "thesis": "Blabbit as an instrument with one orange key: hold it and talk.",
+      "palette": ["#d9d6cf", "#3b3d42", "#1c1c1e", "#ff6a13", "#ffb347"],
+      "materials": ["bone keycaps", "gunmetal chassis", "amber status screen", "knurled knob"],
+      "viewport": "A gunmetal device fills the screen. The orange ⌥ Space key is pressable, and the amber screen types your words as the knob scrubs through models.",
+      "case": "Wins clarity (the key IS the product), loses general Mac users, who don't know this gear culture.",
+      "risk": "Can feel like a hardware product people will try to buy.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-creator-hardware-bench-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/design-canon-creator-hardware-bench.webp"
+    },
+    {
+      "id": "challenger-onebit",
+      "label": "One-Bit Desktop",
+      "verdict": "competitive",
+      "lineage": "1984 one-bit Mac desktop",
+      "thesis": "Black and white pixels only: dithered windows and marching ants around the words you just said.",
+      "palette": ["#ffffff", "#000000", "#888888"],
+      "materials": ["ordered dither", "1px chrome", "pixel caps"],
+      "viewport": "A one-bit desktop where dictated text appears in a window and gets selected with marching ants.",
+      "case": "Holds audience identification; loses clarity, because pure one-bit hides the modern, fast app.",
+      "risk": "Hard to read on phones, and it looks old rather than fast.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-one-bit-desktop-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-one-bit-desktop.webp"
+    },
+    {
+      "id": "challenger-vu",
+      "label": "VU Meter Bridge",
+      "verdict": "declined",
+      "lineage": "recording desk meter bridges",
+      "palette": ["#f3ecd8", "#111111", "#c8281e", "#6b4a2e"],
+      "materials": ["ivory meter faces", "walnut", "glass"],
+      "thesis": "A row of needles reacting to your voice.",
+      "viewport": "A meter bridge that leans into the red as a sample phrase plays.",
+      "risk": "About audio, not text; it misses the words appearing at the cursor.",
+      "case": "Loses both: shows sound, not writing.",
+      "kept": "Motion with mass and damping, never instant values.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge-hero.webp"
+    },
+    {
+      "id": "challenger-teletext",
+      "label": "Teletext Weather Mosaic",
+      "verdict": "declined",
+      "lineage": "broadcast teletext",
+      "palette": ["#000000", "#ffff00", "#00ffff", "#ff00ff"],
+      "materials": ["block mosaic", "fixed cells"],
+      "thesis": "Captions as a broadcast page.",
+      "viewport": "A P100 page with dictation as subtitle rows.",
+      "risk": "Not a Mac, and unfamiliar to many.",
+      "case": "Loses both.",
+      "kept": "The whole-cell grid discipline.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-teletext-weather-mosaic-hero.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku Smoke Flash",
+      "verdict": "declined",
+      "lineage": "raku ceramics",
+      "palette": ["#141210", "#d8d8d2", "#e3641c"],
+      "materials": ["soot clay", "crackle glaze"],
+      "thesis": "Firing as a process.",
+      "viewport": "A vessel lifted into smoke.",
+      "risk": "No connection to dictation.",
+      "case": "Loses both.",
+      "kept": "One hot color reserved for the live state.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp"
+    },
+    {
+      "id": "challenger-rain",
+      "label": "Gravity Rain Garden",
+      "verdict": "declined",
+      "lineage": "surreal impossible worlds",
+      "palette": ["#5f6b63", "#3a78c8", "#c84a3a", "#111111"],
+      "materials": ["painted clouds", "rain trails"],
+      "thesis": "Rain obeying colored gravity.",
+      "viewport": "A dusk garden of bent rain.",
+      "risk": "Pure mood, and the product disappears.",
+      "case": "Loses both.",
+      "kept": "State shown as a physical law, not decoration.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-gravity-rain-garden-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The dark, glowy AI-app landing page, done well.",
+    "palette": ["#07080d", "#eef0f6", "#4a7fe6", "#2ec4d0"],
+    "materials": ["gradient glow", "glass cards", "big headline"],
+    "viewport": "Centered headline, two buttons, product mock below.",
+    "risk": "This is what the current site is, and what you called AI slop."
+  },
+  "steer": true
+}

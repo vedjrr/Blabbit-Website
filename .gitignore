@@ -1,0 +1,6 @@
+.DS_Store
+.vercel/
+.claude/
+.impeccable/hook.cache.json
+.impeccable/questions/
+.impeccable/review/
